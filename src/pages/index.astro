@@ -1,8 +1,10 @@
 ---
+import Card from "../components/ui/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+
 ---
 <MainLayout titulo="Portafolio de Maxi">
-	<h1 title="main-title">Portfolio Maxi</h1>
+	<h2 title="main-title">Inicio</h2>
 
 	<p> Mi nombre es Maximiliano Sequeira Lago. </p>
 
@@ -14,10 +16,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 		<p>Cersia - Desarrollo de aplicaciones</p>
 
 	</section>
+
+	<Card title="Prueba" body=""/>
 </MainLayout>
 
 <style>
 	h1{
 		text-align: center;
+	}
+	section h1 {
+		text-align: start;
 	}
 </style>

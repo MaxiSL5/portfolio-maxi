@@ -1,15 +1,33 @@
 ---
+import MainHeader from '../components/sections/MainHeader.astro'
 import '../styles/global.css'
+
+interface Props {
+	titulo: string;
+    idioma?: string;
+    descripcion?: string;
+}
+
+const {
+titulo = 'Portfolio de Maxi', 
+idioma = 'es', 
+descripcion = 'Portfolio personal de desarrollo y divulgación web: JavaScript, CSS y más'
+} = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang={idioma}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{Astro.props.titulo}</title>
+    <meta name="description" content={descripcion}>
+    <meta property="og:title" content={titulo}>
+    <meta property="og:descripcion" content={descripcion}>
+    <title>{titulo}</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
 </head>
 <body>
+    <MainHeader />
     <slot />
 </body>
 </html>

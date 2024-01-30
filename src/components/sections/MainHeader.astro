@@ -1,0 +1,27 @@
+---
+import Home from '../icons/home.astro'
+import Envelope from '../icons/envelope.astro'
+import '../../styles/custom.css'
+---
+
+<header class="main-header">
+    <h1 class="logo title">
+        Portfolio de Maxi
+    </h1>
+    <nav class="navbar">
+        <a href="/">
+            <Home className="home-icon" />
+        </a>
+        <a href="/contacto">
+            <Envelope className="envelope-icon" /> 
+        </a>
+    </nav>
+</header>
+
+<style>
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
