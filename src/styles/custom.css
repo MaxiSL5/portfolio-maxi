@@ -1,4 +1,43 @@
-.home-icon{
-    width: 18px;
-    height: 18px;
+/* header */
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 1rem;
 }
+
+/* index */
+
+.main-index{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.main-title{
+    font-weight:bold;
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+}
+span{
+    color: brown;
+}
+
+/* contacto */
+
+.main-contact{
+    text-align: center;
+    margin: 2rem;
+}
+.list-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+    .linkedin, .twich{
+        border: solid;
+        border-color: white;
+    }

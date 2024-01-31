@@ -1,27 +1,36 @@
----
-import Home from '../icons/home.astro'
-import Envelope from '../icons/envelope.astro'
-import '../../styles/custom.css'
----
 
 <header class="main-header">
-    <h1 class="logo title">
-        Portfolio de Maxi
-    </h1>
+    <img src="/foto-maxi.jpg" alt="Foto de Maxi" />
+    <h1 class="logo title">Portfolio de Maxi</h1>
     <nav class="navbar">
-        <a href="/">
-            <Home className="home-icon" />
-        </a>
-        <a href="/contacto">
-            <Envelope className="envelope-icon" /> 
-        </a>
+        <a href="/"> Inicio</a>
+        <a href="/sobre-mi">Sobre mi</a>
     </nav>
 </header>
 
 <style>
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    header {
+       display: grid;
+       justify-items: center;
+       align-items: center;
+
+       @media (min-width: 800px){
+            grid-template-columns: repeat(3, 1fr);
+       }
     }
+    img {
+        max-width: 12vh;
+        width: 300px;
+        max-height: 12vh;
+        border-radius: 50%;
+        background-size: cover;
+    }
+    nav {
+        
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        opacity: 90%;
+    }
+    
 </style>

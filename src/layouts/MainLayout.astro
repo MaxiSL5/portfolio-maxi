@@ -1,33 +1,36 @@
 ---
-import MainHeader from '../components/sections/MainHeader.astro'
-import '../styles/global.css'
+import MainHeader from "../components/sections/MainHeader.astro";
+import "@fontsource/onest";
+import "../styles/global.css";
+import "../styles/custom.css";
 
 interface Props {
-	titulo: string;
+    titulo: string;
     idioma?: string;
     descripcion?: string;
 }
 
 const {
-titulo = 'Portfolio de Maxi', 
-idioma = 'es', 
-descripcion = 'Portfolio personal de desarrollo y divulgación web: JavaScript, CSS y más'
-} = Astro.props
+    titulo = "Portfolio de Maxi",
+    idioma = "es",
+    descripcion = "Portfolio personal de desarrollo y divulgación web: JavaScript, CSS y más",
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={idioma}>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content={descripcion}>
-    <meta property="og:title" content={titulo}>
-    <meta property="og:descripcion" content={descripcion}>
-    <title>{titulo}</title>
-    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
-</head>
-<body>
-    <MainHeader />
-    <slot />
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={descripcion} />
+        <meta property="og:title" content={titulo} />
+        <meta property="og:descripcion" content={descripcion} />
+        <title>{titulo}</title>
+        <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+    </head>
+    <body class="container">
+        <MainHeader />
+
+        <slot />
+    </body>
 </html>

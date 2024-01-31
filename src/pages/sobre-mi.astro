@@ -1,0 +1,21 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+<MainLayout titulo="Sobre mi" descripcion="Hablemos sobre mis gusto y mis hobbies">
+
+	<main>
+		<h1>Sobre mi</h1>
+		<div>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus accusantium expedita, quibusdam animi, at obcaecati pariatur laudantium consequatur alias debitis labore. Qui dignissimos dolor perspiciatis, ex dolores vitae blanditiis!
+		</div>
+	</main>
+	
+</MainLayout>
+<style>
+main{
+	text-align: center;
+	@media (min-width: 400px){
+            grid-template-rows: repeat(2, 1fr);
+       }
+}
+</style>
