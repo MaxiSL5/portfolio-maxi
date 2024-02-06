@@ -1,9 +1,5 @@
 ---
-import Card from "../components/ui/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import Linkedin from "../components/icons/linkedin.astro";
-import Intagram from "../components/icons/instagram.astro";
-import Twich from "../components/icons/twich.astro";
 ---
 
 <MainLayout titulo="Portafolio de Maxi">
@@ -12,77 +8,75 @@ import Twich from "../components/icons/twich.astro";
 			<h2 class="main-title">
 				Hola, mi nombre es Maximiliano Sequeira Lago.
 			</h2>
-			<p>
-				Estudiante de <span>desarrollo de aplicaciones web 🖥️</span> en Santiago
-				de Compostela, España.
-			</p>
+			<ul>
+				<li>
+					Estudiante de <span>desarrollo de aplicaciones web 🖥️</span>
+					en Santiago de Compostela, España.
+				</li>
+			</ul>
 		</section>
 
-		<section class="exp-laboral">
+		<section class="experiencia">
 			<h2 title="title">Experiencia laboral</h2>
-			<p>Xunta de Galicia - Auxiliar Administrativo</p>
-			<p>Cersia - Desarrollo de aplicaciones</p>
+			<div class="content">
+				<ul>
+					<li>2023-2024: Cersia - Desarrollo de aplicaciones</li>
+					<li>
+						2022-2023: Xunta de Galicia - Auxiliar Administrativo
+					</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="estudios">
 			<h2 class="title">Estudios</h2>
-			<ul>
-				<li>
-					Ciclo Formativo Grado Superior, Administración y Finanzas
-				</li>
-				<li>
-					Ciclo Formativo Grado Medio, Administración y gestión de
-					empresas
-				</li>
-			</ul>
+			<div class="content">
+				<ul>
+					<li>
+						2018-2022: Ciclo Formativo Grado Superior,
+						Administración y Finanzas
+					</li>
+					<li>
+						2016-2018: Ciclo Formativo Grado Medio, Administración y
+						gestión de empresas
+					</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="certificaciones">
 			<h2 class="title">Certificaciones</h2>
-			<ul>
-				<li>Ciberseguridad - IFCT2059 - Xunta de Galicia</li>
-				<li>Adobe ACA en diseño usando Photoshop</li>
-				<li>
-					Posicionamiento web Seo/sem - COMM2055 - Xunta de Galicia
-				</li>
-				<li>
-					Social media-marketing digital y emprendimiento - Fundación
-					INCYDE
-				</li>
-			</ul>
-		</section>
-		<section class="main-contact">
-			<h1 class="title" id="redes-sociales">Redes Sociales</h1>
-			<div class="list-contact" aria-labelledby="redes-sociales">
-				<a
-					href="https://www.linkedin.com/in/maximiliano-sequeira-lago-a69820299/"
-					target="_blank"
-					rel="noopener"
-					class="linkedin"
-				>
-					<Linkedin /> Linkedin
-				</a>
-
-				<a
-					href="https://www.twitch.tv/maxisl5"
-					target="_blank"
-					rel="noopener"
-					class="twich"
-				>
-					<Twich />
-					Twich
-				</a>
-
-				<!-- <a
-					href="https://www.instagram.com/maxiiisequeira/"
-					target="_blank"
-					rel="noopener"
-				>
-					<Intagram /> Instagram</a
-				> -->
+			<div class="content">
+				<ul>
+					<li>Ciberseguridad - IFCT2059 - Xunta de Galicia</li>
+					<li>Adobe ACA en diseño usando Photoshop</li>
+					<li>
+						Posicionamiento web Seo/sem - COMM2055 - Xunta de
+						Galicia
+					</li>
+					<li>
+						Social media-marketing digital y emprendimiento -
+						Fundación INCYDE
+					</li>
+				</ul>
 			</div>
-			<section></section>
 		</section>
-
 	</main>
 </MainLayout>
+
+<style>
+	ul > li {
+		margin: 16px;
+	}
+	.maxi{
+		padding-top: 100px;
+	}
+	section {
+		width: 100%;
+		margin: auto;
+		transition: transform 0.3s ease;
+	}
+	section:hover {
+		transform: scale(1.1);
+	}
+</style>

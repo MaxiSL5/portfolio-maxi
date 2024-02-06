@@ -1,36 +1,37 @@
 
 <header class="main-header">
-    <img src="/foto-maxi.jpg" alt="Foto de Maxi" />
-    <h1 class="logo title">Portfolio de Maxi</h1>
+    
+    
     <nav class="navbar">
-        <a href="/"> Inicio</a>
-        <a href="/sobre-mi">Sobre mi</a>
+        <a href="/"><h1 class="logo title">Portfolio de Maxi</h1></a>
+        <a href="/sobre-mi" class="sobre-mi">Sobre mi</a>
     </nav>
 </header>
 
 <style>
     header {
-       display: grid;
-       justify-items: center;
-       align-items: center;
 
        @media (min-width: 800px){
             grid-template-columns: repeat(3, 1fr);
        }
     }
-    img {
-        max-width: 12vh;
-        width: 300px;
-        max-height: 12vh;
-        border-radius: 50%;
-        background-size: cover;
-    }
+    
     nav {
-        
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 25%;
+        margin-right: 25%;
         gap: 10px;
         opacity: 90%;
     }
+    a{
+        outline: none;
+        text-decoration: none;
+        color: #ffffff;
+    }
+   
     
 </style>

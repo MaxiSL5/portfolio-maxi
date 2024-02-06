@@ -3,6 +3,8 @@ import MainHeader from "../components/sections/MainHeader.astro";
 import "@fontsource/onest";
 import "../styles/global.css";
 import "../styles/custom.css";
+import Mainfooter from"../components/sections/Mainfooter.astro"
+
 
 interface Props {
     titulo: string;
@@ -28,9 +30,11 @@ const {
         <title>{titulo}</title>
         <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
     </head>
-    <body class="container">
+    <body>
         <MainHeader />
-
-        <slot />
+        <div class="container">
+            <Mainfooter />
+            <slot />
+        </div>
     </body>
 </html>
