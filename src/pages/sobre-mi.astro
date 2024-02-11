@@ -1,21 +1,136 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 ---
-<MainLayout titulo="Sobre mi" descripcion="Hablemos sobre mis gusto y mis hobbies">
 
+<MainLayout
+	titulo="Sobre mi"
+	descripcion="Hablemos sobre mis gusto y mis hobbies"
+>
 	<main>
 		<h1>Sobre mi</h1>
-		<div>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus accusantium expedita, quibusdam animi, at obcaecati pariatur laudantium consequatur alias debitis labore. Qui dignissimos dolor perspiciatis, ex dolores vitae blanditiis!
+		<div class="quien-soy">
+			<p>
+				Como ya sabéis, mi nombre completo es Maximiliano Sequeira Lago
+				y nací en Mar del Plata, Argentina.
+			</p>
+			<p>
+				A los 7 años, me fui a vivir a España, donde me he quedado hasta
+				el día de hoy.
+			</p>
+			<p>
+				Desde pequeño, me gustaron mucho los deportes, siendo el fútbol
+				el que más practiqué, hasta aproximadamente los 20 años, momento
+				en el cual tuve que dejarlo debido a una lesión.
+			</p>
+			<p>
+				Esto hizo que poco a poco descubriera otra pasión: el mundo de
+				la informática, al que de una u otra manera siempre estuve un
+				poco ligado, ya que me gustaba trastear con el ordenador de
+				casa.
+			</p>
+			<p>
+				Pese a ello, nunca había dado el paso de comenzar a estudiar
+				formalmente, ya que lo veía más como un hobby, ya fuera trastear
+				con el ordenador o jugar videojuegos, hasta que un día decidí
+				adentrarme en el mundo de la programación.
+			</p>
+			<p>
+				La programación siempre me había llamado la atención, pero al
+				estudiar Administración y Finanzas, pensaba que mi futuro estaba
+				ahí, hasta que un día tome la decisión de cambiar de rumbo y
+				sumergirme en el fantástico mundo de la programación.
+			</p>
+		</div>
+		<div class="contacto">
+			<form action="#" method="post">
+				<legend>Contacta conmigo</legend>
+				<label for="nombre">Nombre y Apellidos:</label>
+				<input
+					type="text"
+					id="nombre"
+					name="nombre"
+					placeholder="Nombre y Apellidos"
+					required
+				/>
+
+				<label for="email">Email:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="email@example.com"
+					required
+				/>
+
+				<label for="mensaje">Mensaje:</label>
+				<textarea
+					id="mensaje"
+					name="mensaje"
+					placeholder="Escribe tu mensaje aquí..."></textarea>
+
+				<button type="submit" value="Enviar">Enviar</button>
+			</form>
 		</div>
 	</main>
-	
 </MainLayout>
 <style>
-main{
-	text-align: center;
-	@media (min-width: 400px){
-            grid-template-rows: repeat(2, 1fr);
-       }
-}
+	main {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		justify-content: flex-end;
+		@media (min-width: 400px) {
+			grid-template-rows: repeat(2, 1fr);
+		}
+	}
+	form{
+	display: flex;
+	flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 400px;
+	}
+	legend{
+		font-size: 2rem;
+		font-weight: bold;
+		padding-bottom: 5px;
+	}
+	.contacto {
+		width: 500px;
+		margin: 50px auto;
+		padding: 20px;
+		background-color: #669ca7;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		text-align: left;
+	}
+	label {
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	input{
+		max-width: fit-content;
+		border: 2px solid #ccc;
+		border-radius: 5px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+	}
+	textarea {
+		width: 100%;
+		padding: 5px;
+		margin: 5px 0;
+		border: 2px solid #ccc;
+		border-radius: 5px;
+		resize: none;
+	}
+	textarea,input:focus {
+        border-color: #f18383;
+        outline: none;
+    }
+	.quien-soy {
+		text-align: justify;
+	}
+	button{
+		max-width: fit-content;
+		border-radius: 5px;
+		outline: none;
+	}
 </style>
