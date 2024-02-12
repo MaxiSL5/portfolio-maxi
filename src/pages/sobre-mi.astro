@@ -42,31 +42,37 @@ import MainLayout from "../layouts/MainLayout.astro";
 			</p>
 		</div>
 		<div class="contacto">
-			<form action="#" method="post">
-				<legend>Contacta conmigo</legend>
-				<label for="nombre">Nombre y Apellidos:</label>
-				<input
-					type="text"
-					id="nombre"
-					name="nombre"
-					placeholder="Nombre y Apellidos"
-					required
-				/>
+			<form action="#" method="post" class="form-content">
+				<h2 class="title">Contacta conmigo</h2>
+				<div class="child-form">
+					<label for="nombre"></label>
+					<input
+						type="text"
+						id="nombre"
+						name="nombre"
+						placeholder="Nombre y Apellidos"
+						required
+					/>
+				</div>
 
-				<label for="email">Email:</label>
-				<input
-					type="email"
-					id="email"
-					name="email"
-					placeholder="email@example.com"
-					required
-				/>
+				<div class="child-form">
+					<label for="email"></label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="email@example.com"
+						required
+					/>
+				</div>
 
-				<label for="mensaje">Mensaje:</label>
-				<textarea
-					id="mensaje"
-					name="mensaje"
-					placeholder="Escribe tu mensaje aquí..."></textarea>
+				<div class="child-form">
+					<label for="mensaje"></label>
+					<textarea
+						id="mensaje"
+						name="mensaje"
+						placeholder="Escribe tu mensaje aquí..."></textarea>
+				</div>
 
 				<button type="submit" value="Enviar">Enviar</button>
 			</form>
@@ -84,53 +90,63 @@ import MainLayout from "../layouts/MainLayout.astro";
 		}
 	}
 	form{
-	display: flex;
-	flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 400px;
-	}
-	legend{
-		font-size: 2rem;
-		font-weight: bold;
-		padding-bottom: 5px;
-	}
-	.contacto {
-		width: 500px;
-		margin: 50px auto;
-		padding: 20px;
-		background-color: #669ca7;
-		border-radius: 10px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		text-align: left;
-	}
-	label {
-		margin-bottom: 5px;
-		margin-top: 5px;
-	}
-	input{
-		max-width: fit-content;
-		border: 2px solid #ccc;
-		border-radius: 5px;
+    max-width: 100%;
+}
+h2{
+	text-align: center;
+	margin: .5rem 0;
+}
+.contacto {
+	width: 500px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #d6e3e5;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	
+}
+label {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+input,textarea, button {
+
+	font-family: 'Onest';
+}
+input,textarea{
+		width: 100%;
+		padding: 1rem;
+    	margin: .5rem 0;
+    	border-radius: 5px;
+    	border: 1px solid #ccc;
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
 	}
+	input:hover{
+		background-color: #b1b1b1;
+	}
+		::placeholder{
+			font-weight: bold;
+		}
 	textarea {
-		width: 100%;
-		padding: 5px;
-		margin: 5px 0;
-		border: 2px solid #ccc;
-		border-radius: 5px;
 		resize: none;
 	}
+	textarea:hover{
+		background-color: #b1b1b1;
+	}
 	textarea,input:focus {
-        border-color: #f18383;
         outline: none;
     }
 	.quien-soy {
 		text-align: justify;
 	}
 	button{
-		max-width: fit-content;
-		border-radius: 5px;
 		outline: none;
+		margin: .5rem;
+		width: 100%;
+    	margin: .5rem 0;
+    	padding: 1rem;
+   		border-radius: 5px;
+		border: 1px solid #ccc;
+    	text-transform: uppercase;
 	}
 </style>
